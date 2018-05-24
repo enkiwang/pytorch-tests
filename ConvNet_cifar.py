@@ -84,8 +84,6 @@ print("")
 import torch.nn as nn
 import torch.nn.functional as F##### for multiple GPUs, use this code:
 
-
-
 class Net(nn.Module):
     def __init__(self):
         super(Net, self).__init__()
