@@ -11,7 +11,7 @@ For GPU computations:
 specifications:
     1)GPU: NVIDIA Titan X (4 GPUs)
     2)pytorch version: 0.40 (torch.device not available for lower pytorch versions)
-loss: 2.306 (epc=1), 0.94 (epc=50), 0.579(epc=100),..., 0.178(epc=200),.., 
+loss: 2.306 (epc=1), 0.94 (epc=50), 0.579(epc=100),..., 0.178(epc=200),.., 0.000(epc=520)
     
 Note that:
  This code will display "Exception NameError", due to 0.40 pytorch version. Downgrade to 
