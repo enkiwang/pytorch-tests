@@ -9,7 +9,7 @@ For GPU computations:
     2)put the DATA onto the specified computing device
 
 specifications:
-    1)GPU: NVIDIA 1080 Ti 
+    1)GPU: NVIDIA Titan X (4 GPUs)
     2)pytorch version: 0.40 (torch.device not available for lower pytorch versions)
 loss: 2.306 (epc=1), 0.94 (epc=50), 0.579(epc=100),..., 0.178(epc=200),.., 
     
