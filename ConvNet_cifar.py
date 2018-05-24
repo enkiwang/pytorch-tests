@@ -124,7 +124,7 @@ criterion = nn.CrossEntropyLoss()
 optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
 
 ## **************** Train the ConvNet ****************
-epoch_ = 1000
+epoch_ = 800
 disp_ = 50  # display loss per disp_ batches 
 for epoch in range(epoch_):  # loop over the dataset multiple times
 
@@ -150,6 +150,10 @@ for epoch in range(epoch_):  # loop over the dataset multiple times
         if (i+1) % disp_ == 0:    # print losses every disp_ mini-batches (e.g.,disp_=20: per 20*128=2560 training samples)
             print('epoch %d / %d, minibatch_num  %d,  loss: %.3f' %
                   (epoch + 1, epoch_, i + 1, running_loss / disp_))
-            running_loss = 0.0
-
+            running_loss = 0.0        
+            
+    if (epoch+1) % 20 == 0:
+        torch.save(net.state_dict(), "LeNet_model/LeNet_cifar_{0:04d}.pt".format(epoch+1))
+        print(" LeNet model saved at %3d th epoch!" % (epoch+1))
+       
 print('\n Finished Training! \n')
