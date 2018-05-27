@@ -63,17 +63,17 @@ print("data1_conv_tconv.size():", data1_conv_tconv.size())
 
 print(data1)
 print(data1_conv_tconv)
-"""
 
+"""
 ('data1.size():', (1, 1, 3, 3))
 ('data1_conv.size():', (1, 8, 1, 1))
 ('data1_conv_tconv.size():', (1, 1, 3, 3))
-tensor([[[[-0.1544,  1.9889,  0.4033],
-          [-1.4700, -0.7494, -0.4969],
-          [-0.1673,  0.8945,  0.0486]]]])
-tensor([[[[-0.1497,  0.0525, -0.1001],
-          [-0.1366,  0.1468,  0.0253],
-          [ 0.0563, -0.0709,  0.0163]]]])
+tensor([[[[-1.1720, -0.3929,  0.5265],
+          [ 1.1065,  0.9273, -1.7421],
+          [-0.7699,  0.7864, -1.9963]]]])
+tensor([[[[ 0.0376, -0.2292, -0.0740],
+          [-0.3514, -0.3656,  0.2330],
+          [ 0.2754,  0.0635, -0.1715]]]])
 
 data1 does not equal to data1_conv_tconv;
 Unlike that in TF, conv. or tconv. weights have been initialized in pytorch?
