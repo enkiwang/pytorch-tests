@@ -49,8 +49,8 @@ data1 = torch.randn(N, C_in, H_in, W_in)
 conv = nn.Conv2d(in_channels, out_channels, kernel_size=k, stride=s, padding=p)  #conv. para. (1, 8, 3, 1, 0)
 data1_conv = conv(data1)    #data1_conv 
 
-print("data1.size():", data1.size())      #(2, 1, 3, 3)
-print("data1_conv.size():", data1_conv.size()) #(2, 8, 1, 1)
+print("data1.size():", data1.size())      #(N, 1, 3, 3)
+print("data1_conv.size():", data1_conv.size()) #(N, 8, 1, 1)
 
 """ **************************** torch.nn.ConvTranspose2d(in_chan,out_chan,k,s,p) **************************** """
 transposed_conv = nn.ConvTranspose2d(out_channels, in_channels, kernel_size=k, stride=s, padding=p)
