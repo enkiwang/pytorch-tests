@@ -13,7 +13,7 @@ def display_imgs(imgs,numPerRow,numPerCol,imgH=32,imgW=32):
     
     for i in range(numPerCol):
         for j in range(numPerRow):
-            tmp = imgs[i*numPerCol+j,:].reshape([imgH,imgW])
+            tmp = imgs[i*numPerRow+j,:].reshape([imgH,imgW])
             Img[i*imgW:(i+1)*imgW, j*imgH:(j+1)*imgH] = tmp
             
     plt.imshow(Img,cmap='gray')
